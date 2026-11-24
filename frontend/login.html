@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - TeamUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <h2>TeamUp</h2>
+        <a href="index.html">Home</a>
+        <a href="project.html">Browse Projects</a>
+        <a href="teams.html">My Teams</a>
+        <a href="login.html">Login / Register</a>
+    </nav>
+
+    <section class="projects-section">
+        <h1>Welcome to TeamUp</h1>
+        <p>Register or log in to connect with project teammates.</p>
+
+        <!-- Student Registration -->
+        <h2>Student Registration</h2>
+
+        <form id="registerForm">
+            <input
+                type="text"
+                id="studentName"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <input
+                type="email"
+                id="studentEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                type="password"
+                id="studentPassword"
+                placeholder="Create a password (minimum 8 characters)"
+                minlength="8"
+                required
+            >
+
+            <button type="submit">Register</button>
+        </form>
+
+        <p id="registerMessage"></p>
+
+        <hr>
+
+        <!-- Student Login -->
+        <h2>Student Login</h2>
+
+        <form id="loginForm">
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Enter your email"
+                required
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Enter your password"
+                required
+            >
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="loginMessage"></p>
+
+        <button id="logoutButton" type="button" hidden>
+            Logout
+        </button>
+
+        <p id="welcomeMessage"></p>
+
+        <hr>
+
+        <p>
+            Want to explore projects?
+            <a href="project.html">Browse Projects</a>
+        </p>
+
+        <p>
+            <a href="registers.html">Open the separate registration page</a>
+        </p>
+    </section>
+
+    
+<script src="script.js"></script>
+</body>
+</html>

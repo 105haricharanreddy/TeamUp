@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: teamup-student-platform
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DATABASE_PATH
+        value: /var/data/teamup.db
+    disk:
+      name: teamup-data
+      mountPath: /var/data
+      sizeGB: 1

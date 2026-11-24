@@ -1,0 +1,2031 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6ff;
+    color: #222244;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: white;
+}
+
+nav h2 {
+    color: #5b4bdb;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    margin-left: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+}
+
+.hero p {
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 24px;
+    background-color: #5b4bdb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.projects-section {
+    padding: 40px 8%;
+    text-align: center;
+}
+
+#searchInput {
+    width: 80%;
+    max-width: 500px;
+    padding: 14px;
+    margin: 20px 0 30px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 24px;
+    border: 1px solid #e5e7ef;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.card button {
+    background-color: #5b4bdb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+.details-section {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.details-section > a {
+    color: #5b4bdb;
+    text-decoration: none;
+}
+
+.details-card {
+    background: white;
+    margin-top: 25px;
+    padding: 35px;
+    border: 1px solid #e5e7ef;
+    border-radius: 14px;
+}
+
+.project-label {
+    color: #5b4bdb;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background: #eeedff;
+    color: #4b3bc7;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+    .details-section {
+        margin: 20px auto;
+    }
+
+    .details-card {
+        padding: 22px;
+    }
+}
+
+.teams-section {
+    padding: 40px 8%;
+}
+
+.teams-section > h1 {
+    text-align: center;
+}
+
+.teams-section > p {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.teams-section > h2 {
+    margin-top: 35px;
+}
+
+.teams-section .cards {
+    margin-top: 20px;
+}
+
+@media (max-width: 650px) {
+    .teams-section {
+        padding: 25px 5%;
+    }
+}
+
+#projectForm {
+    max-width: 600px;
+    margin: 20px auto 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#projectForm input,
+#projectForm textarea {
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+#projectForm textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#projectForm button {
+    padding: 12px;
+    background-color: #5b4bdb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#projectForm button:hover {
+    background-color: #4636c5;
+}
+
+/* ===== TeamUp Navigation Improvements ===== */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #172554;
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #60a5fa;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+#welcomeMessage {
+    color: #bfdbfe;
+    font-weight: bold;
+}
+
+#logoutButton {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+#logoutButton:hover {
+    background: #dc2626;
+}
+
+/* ===== Mobile Responsive Navigation ===== */
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav div {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* ===== TeamUp Project Cards ===== */
+
+#projectList,
+#myProjects,
+#myRequests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.14);
+}
+
+.card h3 {
+    color: #172554;
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.card p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+.card button,
+button.btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 18px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.25s ease;
+}
+
+.card button:hover,
+button.btn:hover {
+    background: #1d4ed8;
+}
+
+/* ===== Project Skills ===== */
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.skill {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ===== Page Layout ===== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+section {
+    padding: 30px 5%;
+}
+
+/* ===== Mobile Card Layout ===== */
+
+@media (max-width: 600px) {
+    #projectList,
+    #myProjects,
+    #myRequests {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
+
+/* ===== TEAMUP MODERN DESIGN ===== */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --navy: #0f172a;
+    --background: #f1f5f9;
+    --white: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+}
+
+/* General page design */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 16px 6%;
+    background: var(--navy);
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.15);
+}
+
+nav h2 {
+    margin: 0;
+    color: #60a5fa;
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+#welcomeMessage {
+    color: #bfdbfe;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#logoutButton {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+#logoutButton:hover {
+    background: #dc2626;
+}
+
+/* Home page hero section */
+
+.hero {
+    min-height: 420px;
+    padding: 90px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb, #38bdf8);
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin: 0 0 18px;
+    font-size: clamp(32px, 5vw, 54px);
+    line-height: 1.15;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 0 28px;
+    color: #eff6ff;
+    font-size: 18px;
+}
+
+/* Reusable buttons */
+
+.btn,
+button,
+input[type="submit"] {
+    font-family: inherit;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    background: white;
+    color: var(--primary-dark);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Common content sections */
+
+section:not(.hero) {
+    padding: 35px 6%;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.3;
+}
+
+/* Project cards */
+
+#projectList,
+#myProjects,
+#myRequests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+#projectList > *,
+#myProjects > *,
+#myRequests > * {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#projectList > *:hover,
+#myProjects > *:hover,
+#myRequests > *:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+/* Forms and input fields */
+
+input,
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px 14px;
+    margin: 7px 0 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Buttons inside forms and cards */
+
+button,
+input[type="submit"] {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 9px;
+    background: var(--primary);
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: var(--primary-dark);
+}
+
+/* Keep logout button red */
+
+#logoutButton {
+    background: #ef4444;
+}
+
+#logoutButton:hover {
+    background: #dc2626;
+}
+
+/* Mobile-friendly layout */
+
+@media (max-width: 650px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 5%;
+    }
+
+    nav div {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 60px 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section:not(.hero) {
+        padding: 25px 5%;
+    }
+
+    #projectList,
+    #myProjects,
+    #myRequests {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ===== TEAMUP DARK NAVY + GLOWING BLUE HOME PAGE ===== */
+
+.home-page {
+    background: #070b18;
+    color: #eaf2ff;
+}
+
+/* Navigation */
+
+.home-page nav {
+    background: rgba(7, 11, 24, 0.96);
+    border-bottom: 1px solid rgba(96, 165, 250, 0.16);
+    padding: 18px 7%;
+    position: relative;
+    z-index: 5;
+}
+
+.home-page nav h2,
+.home-page .site-footer h2 {
+    color: #f8fbff;
+    font-size: 28px;
+    letter-spacing: -1px;
+}
+
+.logo-dot {
+    color: #38bdf8;
+    text-shadow: 0 0 15px #38bdf8;
+}
+
+.home-page nav a {
+    color: #b9c6dc;
+}
+
+.home-page nav a:hover {
+    color: #60a5fa;
+    text-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
+}
+
+.home-page #welcomeMessage {
+    color: #93c5fd;
+}
+
+/* Hero section */
+
+.home-page .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 570px;
+    padding: 100px 7%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+    background:
+        radial-gradient(ellipse at 75% 45%,
+            rgba(37, 99, 235, 0.18), transparent 40%),
+        linear-gradient(135deg, #070b18, #0b1430 65%, #07101f);
+}
+
+.home-page .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.17;
+    background-image:
+        linear-gradient(rgba(96, 165, 250, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(96, 165, 250, 0.12) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+}
+
+.hero-label,
+.section-label {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 12px #38bdf8;
+}
+
+.home-page .hero h1 {
+    margin: 22px 0;
+    font-size: clamp(38px, 5.5vw, 68px);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    color: #f8fbff;
+}
+
+.glow-text {
+    color: #60a5fa;
+    text-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+}
+
+.home-page .hero-description {
+    max-width: 550px;
+    color: #a8b7d0;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.home-page .btn {
+    padding: 14px 23px;
+    border-radius: 9px;
+    font-size: 14px;
+    transition: 0.25s ease;
+}
+
+.home-page .primary-btn {
+    color: white;
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+    border: 1px solid #60a5fa;
+    box-shadow: 0 0 22px rgba(37, 99, 235, 0.22);
+}
+
+.home-page .primary-btn:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.42);
+}
+
+.home-page .secondary-btn {
+    color: #dbeafe;
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid #334766;
+    box-shadow: none;
+}
+
+.home-page .secondary-btn:hover {
+    border-color: #60a5fa;
+    color: white;
+}
+
+.hero-note {
+    margin-top: 32px;
+    color: #8192ad;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Decorative glowing orbit */
+
+.hero-decoration {
+    position: relative;
+    flex: 0 0 290px;
+    width: 290px;
+    height: 290px;
+    margin-right: 35px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        rgba(37, 99, 235, 0.13), transparent 68%);
+}
+
+.orbit {
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(96, 165, 250, 0.42);
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.08);
+}
+
+.orbit-one {
+    transform: rotateX(60deg) rotate(-25deg);
+}
+
+.orbit-two {
+    inset: 0;
+    transform: rotateX(60deg) rotate(45deg);
+    border-color: rgba(56, 189, 248, 0.32);
+}
+
+.orbit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 105px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    border-radius: 28px;
+    border: 1px solid rgba(96, 165, 250, 0.8);
+    background: linear-gradient(135deg, #102958, #0c1835);
+    color: white;
+    font-size: 45px;
+    font-weight: 800;
+    box-shadow: 0 0 45px rgba(37, 99, 235, 0.32);
+}
+
+.orbit-center span {
+    color: #38bdf8;
+}
+
+.orbit-dot {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+.dot-one {
+    top: 25px;
+    right: 52px;
+}
+
+.dot-two {
+    bottom: 35px;
+    left: 25px;
+}
+
+.dot-three {
+    top: 120px;
+    right: -5px;
+}
+
+/* Features */
+
+.features-section {
+    background: #090e1d;
+    padding: 85px 7% !important;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.section-heading h2,
+.cta-card h2 {
+    margin: 12px 0;
+    color: #f1f5ff;
+    font-size: clamp(28px, 4vw, 42px);
+    letter-spacing: -1px;
+}
+
+.section-heading h2 span {
+    color: #60a5fa;
+}
+
+.section-heading > p:last-child,
+.cta-card > p:not(.section-label) {
+    color: #94a3b8;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #101a30, #0b1223);
+    border: 1px solid #1d3150;
+    transition: 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    border-color: #3b82f6;
+    box-shadow: 0 0 28px rgba(37, 99, 235, 0.13);
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(37, 99, 235, 0.16);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #60a5fa;
+    font-size: 26px;
+}
+
+.feature-card h3 {
+    color: #eff6ff;
+    margin: 22px 0 10px;
+    font-size: 20px;
+}
+
+.feature-card p {
+    color: #94a3b8;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* Call to action */
+
+.cta-section {
+    padding: 45px 7% 80px !important;
+    background: #090e1d;
+}
+
+.cta-card {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 55px 25px;
+    text-align: center;
+    border: 1px solid #254b82;
+    border-radius: 20px;
+    background:
+        radial-gradient(ellipse at 50% 0%,
+            rgba(37, 99, 235, 0.25), transparent 70%),
+        #0d1730;
+    box-shadow: 0 0 45px rgba(37, 99, 235, 0.08);
+}
+
+.cta-card .primary-btn {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+/* Footer */
+
+.site-footer {
+    padding: 35px 7%;
+    text-align: center;
+    background: #050814;
+    border-top: 1px solid #18243b;
+}
+
+.site-footer h2 {
+    margin: 0;
+}
+
+.site-footer p {
+    color: #8192ad;
+    font-size: 14px;
+}
+
+.site-footer .footer-copy {
+    padding-top: 20px;
+    margin-top: 25px;
+    border-top: 1px solid #18243b;
+    font-size: 12px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 800px) {
+    .home-page .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 75px 6%;
+    }
+
+    .hero-decoration {
+        align-self: center;
+        flex-basis: auto;
+        width: 230px;
+        height: 230px;
+        margin: 25px 0 0;
+        transform: scale(0.9);
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .home-page nav {
+        align-items: flex-start;
+    }
+
+    .home-page nav div {
+        gap: 12px;
+    }
+
+    .home-page nav a {
+        font-size: 13px;
+    }
+
+    .home-page .hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .hero-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        text-align: center;
+    }
+
+    .features-section {
+        padding: 60px 5% !important;
+    }
+
+    .feature-card {
+        padding: 23px;
+    }
+}
+
+/* ===== TEAMUP PROJECTS PAGE: DARK BLUE THEME ===== */
+
+body:not(.home-page) {
+    background: #080d1b;
+    color: #e5edff;
+}
+
+/* Page headings */
+
+body:not(.home-page) h1,
+body:not(.home-page) h2,
+body:not(.home-page) h3 {
+    color: #eff6ff;
+}
+
+/* Navigation */
+
+body:not(.home-page) nav {
+    background: #070b18;
+    border-bottom: 1px solid #1e3152;
+}
+
+body:not(.home-page) nav a {
+    color: #cbd5e1;
+}
+
+body:not(.home-page) nav a:hover {
+    color: #60a5fa;
+}
+
+/* Main sections */
+
+body:not(.home-page) section {
+    background: transparent;
+}
+
+/* Project cards */
+
+body:not(.home-page) #projectList > *,
+body:not(.home-page) #myProjects > *,
+body:not(.home-page) #myRequests > * {
+    background: linear-gradient(145deg, #111c33, #0c1426);
+    color: #cbd5e1;
+    border: 1px solid #223758;
+    border-radius: 15px;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.2);
+}
+
+body:not(.home-page) #projectList > *:hover,
+body:not(.home-page) #myProjects > *:hover,
+body:not(.home-page) #myRequests > *:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.16);
+}
+
+/* Project descriptions and other text */
+
+body:not(.home-page) p,
+body:not(.home-page) label {
+    color: #a8b7d0;
+}
+
+/* Form fields */
+
+body:not(.home-page) input,
+body:not(.home-page) textarea,
+body:not(.home-page) select {
+    background: #0c1426;
+    color: #f1f5f9;
+    border: 1px solid #2b3d5c;
+}
+
+body:not(.home-page) input::placeholder,
+body:not(.home-page) textarea::placeholder {
+    color: #8292ad;
+}
+
+body:not(.home-page) input:focus,
+body:not(.home-page) textarea:focus,
+body:not(.home-page) select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    outline: none;
+}
+
+/* Buttons */
+
+body:not(.home-page) button,
+body:not(.home-page) input[type="submit"] {
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+    color: white;
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+}
+
+body:not(.home-page) button:hover,
+body:not(.home-page) input[type="submit"]:hover {
+    background: #1d4ed8;
+}
+
+/* Keep logout button red */
+
+body:not(.home-page) #logoutButton {
+    background: #dc2626;
+    border-color: #ef4444;
+}
+
+body:not(.home-page) #logoutButton:hover {
+    background: #b91c1c;
+}
+
+/* ===== TEAMUP PROJECT DETAILS PAGE ===== */
+
+#projectDetails {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 32px;
+    background: linear-gradient(145deg, #111c33, #0b1223);
+    border: 1px solid #263b5e;
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.10);
+}
+
+#projectDetails h1,
+#projectDetails h2,
+#projectDetails h3 {
+    color: #f1f5ff;
+    margin-bottom: 16px;
+}
+
+#projectDetails p {
+    color: #b7c5dc;
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+#projectDetails strong {
+    color: #60a5fa;
+}
+
+#requestMessage,
+#projectMessage {
+    color: #93c5fd;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+/* Details page form fields */
+
+#projectDetails input,
+#projectDetails textarea,
+#projectDetails select {
+    background: #080f20;
+    color: #f1f5f9;
+    border: 1px solid #2b3d5c;
+    border-radius: 9px;
+}
+
+/* Details page buttons */
+
+#projectDetails button {
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+    color: white;
+    border: 1px solid #3b82f6;
+    border-radius: 9px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#projectDetails button:hover {
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    #projectDetails {
+        margin: 20px 5%;
+        padding: 22px;
+    }
+}
+
+/* ===== TEAMUP MY TEAMS PAGE ===== */
+
+#myProjects,
+#myRequests {
+    max-width: 1150px;
+    margin: 25px auto;
+    gap: 22px;
+}
+
+/* Team and request cards */
+
+#myProjects > *,
+#myRequests > * {
+    background: linear-gradient(145deg, #111c33, #0b1223);
+    border: 1px solid #263b5e;
+    border-radius: 16px;
+    padding: 24px;
+    color: #dbeafe;
+    box-shadow: 0 5px 22px rgba(0, 0, 0, 0.2);
+    transition: 0.25s ease;
+}
+
+#myProjects > *:hover,
+#myRequests > *:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 24px rgba(37, 99, 235, 0.16);
+    transform: translateY(-4px);
+}
+
+/* Team headings */
+
+body:not(.home-page) h1,
+body:not(.home-page) h2,
+body:not(.home-page) h3 {
+    color: #eff6ff;
+}
+
+/* Team descriptions */
+
+#myProjects p,
+#myRequests p {
+    color: #a8b7d0;
+    line-height: 1.8;
+}
+
+/* Accept button */
+
+#myRequests button {
+    margin: 5px 6px 5px 0;
+}
+
+#myRequests button:first-of-type {
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+}
+
+/* Responsive layout */
+
+@media (max-width: 600px) {
+    #myProjects,
+    #myRequests {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    #myProjects > *,
+    #myRequests > * {
+        padding: 20px;
+    }
+}
+
+
+/* ===== TEAMUP LOGIN AND REGISTRATION DESIGN ===== */
+
+body:has(#loginForm),
+body:has(#registerForm) {
+    min-height: 100vh;
+    background:
+        radial-gradient(ellipse at top right,
+            rgba(37, 99, 235, 0.18), transparent 45%),
+        #070b18;
+    color: #eaf2ff;
+}
+
+/* Login and registration headings */
+
+body:has(#loginForm) h1,
+body:has(#loginForm) h2,
+body:has(#registerForm) h1,
+body:has(#registerForm) h2 {
+    color: #f1f5ff;
+}
+
+/* Forms */
+
+#loginForm,
+#registerForm {
+    max-width: 460px;
+    margin: 45px auto;
+    padding: 32px;
+    background: linear-gradient(145deg, #111c33, #0b1223);
+    border: 1px solid #263b5e;
+    border-radius: 18px;
+    box-shadow: 0 0 35px rgba(37, 99, 235, 0.13);
+}
+
+#loginForm label,
+#registerForm label {
+    display: block;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+/* Input fields */
+
+#loginForm input,
+#registerForm input {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    margin: 8px 0 18px;
+    background: #080f20;
+    color: #f8fafc;
+    border: 1px solid #2b3d5c;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+#loginForm input:focus,
+#registerForm input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+#loginForm input::placeholder,
+#registerForm input::placeholder {
+    color: #8292ad;
+}
+
+/* Submit buttons */
+
+#loginForm button,
+#registerForm button,
+#loginForm input[type="submit"],
+#registerForm input[type="submit"] {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+    color: white;
+    border: 1px solid #3b82f6;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#loginForm button:hover,
+#registerForm button:hover,
+#loginForm input[type="submit"]:hover,
+#registerForm input[type="submit"]:hover {
+    box-shadow: 0 0 22px rgba(59, 130, 246, 0.35);
+    transform: translateY(-2px);
+}
+
+/* Error and success messages */
+
+#loginMessage,
+#registerMessage {
+    margin-top: 15px;
+    color: #93c5fd;
+    font-weight: 600;
+}
+
+/* Links */
+
+body:has(#loginForm) a,
+body:has(#registerForm) a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+body:has(#loginForm) a:hover,
+body:has(#registerForm) a:hover {
+    color: #bfdbfe;
+    text-decoration: underline;
+}
+
+/* Small screens */
+
+@media (max-width: 520px) {
+    #loginForm,
+    #registerForm {
+        width: 90%;
+        margin: 30px auto;
+        padding: 24px;
+    }
+}
+
+/* ===== PROJECT SEARCH AND SKILL FILTERS ===== */
+
+.project-filters {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 28px;
+    background: linear-gradient(145deg, #111c33, #0b1223);
+    border: 1px solid #263b5e;
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.1);
+}
+
+.project-filters h2 {
+    margin-top: 0;
+    color: #eff6ff;
+}
+
+.project-filters > p {
+    color: #a8b7d0;
+}
+
+.project-filters input,
+.project-filters select {
+    display: block;
+    width: 100%;
+    margin: 14px 0;
+    padding: 14px;
+    color: #f1f5f9;
+    background: #080f20;
+    border: 1px solid #2b3d5c;
+    border-radius: 9px;
+    font: inherit;
+}
+
+.project-filters input:focus,
+.project-filters select:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.project-filters button {
+    padding: 11px 18px;
+    color: white;
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+    border: 1px solid #3b82f6;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.project-filters button:hover {
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.3);
+}
+
+#filterResult {
+    margin-bottom: 0;
+    color: #93c5fd;
+    font-size: 14px;
+}
+
+@media (min-width: 700px) {
+    .project-filters {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 220px auto;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .project-filters h2,
+    .project-filters > p {
+        grid-column: 1 / -1;
+    }
+
+    .project-filters input,
+    .project-filters select {
+        margin: 0;
+        min-width: 0;
+    }
+}
+
+/* ===== STUDENT PROFILE PAGE ===== */
+
+.profile-section {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #111c33;
+    color: #eff6ff;
+    border: 1px solid #263b5e;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.profile-section h1 {
+    margin-top: 0;
+    color: #60a5fa;
+}
+
+.profile-section > p {
+    color: #a8b7d0;
+}
+
+#profileForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#profileForm label {
+    margin-top: 8px;
+    color: #dbeafe;
+    font-weight: 600;
+}
+
+#profileForm input,
+#profileForm select,
+#profileForm textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    color: #f1f5f9;
+    background: #080f20;
+    border: 1px solid #2b3d5c;
+    border-radius: 8px;
+    font: inherit;
+}
+
+#profileForm input:focus,
+#profileForm select:focus,
+#profileForm textarea:focus {
+    outline: 2px solid #60a5fa;
+}
+
+#profileForm button,
+#editProfileButton {
+    margin-top: 12px;
+    padding: 13px 18px;
+    color: white;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#profileForm button:hover,
+#editProfileButton:hover {
+    background: #1d4ed8;
+}
+
+#profileMessage {
+    color: #93c5fd;
+    margin-top: 15px;
+}
+
+#savedProfile {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #2b3d5c;
+}
+
+#profileDisplay p {
+    color: #cbd5e1;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.profile-skill {
+    display: inline-block;
+    margin: 4px;
+    padding: 6px 10px;
+    color: #bfdbfe;
+    background: #1e3a5f;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .profile-section {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+}
+
+/* ===== FIND TEAMMATES PAGE ===== */
+
+.students-section {
+    max-width: 1100px;
+    margin: 45px auto;
+    padding: 25px;
+    color: #eff6ff;
+}
+
+.students-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.students-heading h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin: 12px 0;
+}
+
+.students-heading h1 span {
+    color: #60a5fa;
+}
+
+.students-heading > p:last-child {
+    color: #a8b7d0;
+}
+
+.student-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px auto;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.student-filters input,
+.student-filters select {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 13px;
+    background: #111c33;
+    color: #eff6ff;
+    border: 1px solid #2b3d5c;
+    border-radius: 9px;
+    font: inherit;
+}
+
+.student-filters button {
+    padding: 12px 18px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.student-filters button:hover {
+    background: #1d4ed8;
+}
+
+#studentCount {
+    color: #93c5fd;
+    margin: 20px 0;
+}
+
+.student-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+}
+
+.student-card {
+    background: #111c33;
+    border: 1px solid #263b5e;
+    border-radius: 16px;
+    padding: 24px;
+    overflow-wrap: anywhere;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    border-color: #60a5fa;
+}
+
+.student-avatar {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1e3a5f;
+    color: #bfdbfe;
+    border-radius: 50%;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.student-card h2 {
+    margin-bottom: 8px;
+    color: #f8fafc;
+}
+
+.student-card p {
+    color: #b8c7dc;
+    line-height: 1.6;
+}
+
+.student-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 15px 0;
+}
+
+.student-tag {
+    padding: 6px 10px;
+    background: #1e3a5f;
+    color: #bfdbfe;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.student-empty {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+    background: #111c33;
+    border-radius: 12px;
+    color: #a8b7d0;
+}
+
+@media (max-width: 700px) {
+    .students-section {
+        padding: 16px;
+        margin: 25px auto;
+    }
+
+    .student-filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== CONNECT BUTTON ===== */
+
+.connect-button {
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.connect-button:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.connect-button:disabled {
+    background: #334155;
+    color: #cbd5e1;
+    cursor: not-allowed;
+}
+
+/* ===== TEAMUP CONNECTIONS PAGE ===== */
+
+.connections-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+}
+
+.connections-container h1 {
+    color: #243b6b;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.connections-container h2 {
+    color: #334b7d;
+    margin: 30px 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #dbe5f5;
+}
+
+/* Separate connection request cards */
+.connection-card,
+.request-card,
+.connections-container .card {
+    background: linear-gradient(135deg, #ffffff, #f1f5ff);
+    border: 1px solid #d9e3f5;
+    border-left: 5px solid #5875d9;
+    border-radius: 14px;
+    padding: 22px;
+    margin: 16px 0;
+    box-shadow: 0 5px 18px rgba(35, 55, 100, 0.09);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.connection-card:hover,
+.request-card:hover,
+.connections-container .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 24px rgba(35, 55, 100, 0.15);
+}
+
+.connections-container p {
+    color: #526079;
+    line-height: 1.6;
+}
+
+.connections-container button {
+    padding: 10px 18px;
+    margin: 10px 8px 0 0;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.connections-container button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Accept button */
+.connections-container button:first-of-type {
+    background: #23865b;
+    color: white;
+}
+
+/* Reject button */
+.connections-container button:last-of-type {
+    background: #e45460;
+    color: white;
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+    .connections-container {
+        margin: 20px auto;
+        padding: 14px;
+    }
+
+    .connection-card,
+    .request-card,
+    .connections-container .card {
+        padding: 16px;
+    }
+}
+
+/* FORCE BETTER STYLING ON TEAMUP CONNECTIONS */
+
+#connectionRequests .card,
+#myConnections .card,
+#connectionRequests > div,
+#myConnections > div {
+    background: #e8efff !important;
+    color: #1e2b4a !important;
+    border: 1px solid #c5d4f5 !important;
+    border-left: 6px solid #4f67d8 !important;
+    border-radius: 16px !important;
+    padding: 24px !important;
+    margin: 18px 0 !important;
+    box-shadow: 0 6px 18px rgba(45, 65, 120, 0.12) !important;
+}
+
+#connectionRequests h3,
+#myConnections h3 {
+    color: #263d79 !important;
+    margin-bottom: 12px;
+}
+
+#connectionRequests p,
+#myConnections p {
+    color: #465575 !important;
+}
+
+#connectionRequests button,
+#myConnections button {
+    padding: 10px 20px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    margin: 8px 8px 0 0 !important;
+    color: white !important;
+    font-weight: bold !important;
+    cursor: pointer;
+}
+
+#connectionRequests button:first-of-type {
+    background: #168653 !important;
+}
+
+#connectionRequests button:last-of-type {
+    background: #dc4555 !important;
+}
+
+#connectionRequests button:hover,
+#myConnections button:hover {
+    opacity: 0.85;
+}
+
+
+/* TEAMUP DASHBOARD WELCOME SECTION */
+
+.dashboard-welcome {
+    margin: 30px auto;
+    padding: 40px 30px;
+    max-width: 1100px;
+    background: linear-gradient(135deg, #263d79, #6579df);
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(38, 61, 121, 0.2);
+}
+
+.dashboard-welcome h1 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.dashboard-welcome p {
+    color: #edf1ff;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.dashboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.dashboard-actions a {
+    display: inline-block;
+    padding: 12px 18px;
+    background: white;
+    color: #304780;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.dashboard-actions a:hover {
+    background: #e4eaff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .dashboard-welcome {
+        margin: 18px 12px;
+        padding: 25px 18px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-actions a {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}
+
+
+
+
+
+

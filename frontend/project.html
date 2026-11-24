@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Projects - TeamUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <h2>TeamUp</h2>
+        <a href="index.html">Home</a>
+        <a href="project.html">Browse Projects</a>
+        <a href="teams.html">My Teams</a>
+    </nav>
+
+    <section class="projects-section">
+
+        <h1>Explore Projects</h1>
+        <p>Find projects and connect with teammates.</p>
+
+        <!-- Create a New Project -->
+        <h2>Create a New Project</h2>
+
+        <form id="projectForm">
+
+            <input
+                type="text"
+                id="projectName"
+                placeholder="Enter project name"
+                required
+            >
+
+            <textarea
+                id="projectDescription"
+                placeholder="Enter project description"
+                required
+            ></textarea>
+
+            <input
+                type="text"
+                id="projectOwner"
+                placeholder="Enter your name (project owner)"
+                required
+            >
+
+            <input
+                type="number"
+                id="teamSize"
+                placeholder="Maximum team size"
+                min="2"
+                max="10"
+                value="4"
+                required
+            >
+
+            <input
+                type="text"
+                id="projectSkills"
+                placeholder="Skills, separated by commas"
+                required
+            >
+
+            <button type="submit">Create Project</button>
+
+        </form>
+
+        <p id="projectMessage"></p>
+
+        <!-- Search and Filter Projects -->
+        <div class="project-filters">
+
+            <h2>Browse Existing Projects</h2>
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search by name, description, or skill..."
+                aria-label="Search projects"
+            >
+
+            <select id="skillFilter" aria-label="Filter projects by skill">
+                <option value="">All Skills</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="AI">AI</option>
+                <option value="IoT">IoT</option>
+                <option value="SQL">SQL</option>
+                <option value="Data Science">Data Science</option>
+                <option value="React">React</option>
+                <option value="Node.js">Node.js</option>
+            </select>
+
+            <button type="button" id="clearFilters">
+                Clear Filters
+            </button>
+
+            <p id="filterResult" aria-live="polite"></p>
+
+        </div>
+
+        <!-- Keep this ID for your existing JavaScript -->
+        <div id="projectList" class="cards"></div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

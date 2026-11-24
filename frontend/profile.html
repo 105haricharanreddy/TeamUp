@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - TeamUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <h2>TeamUp</h2>
+        <a href="index.html">Home</a>
+        <a href="project.html">Browse Projects</a>
+        <a href="teams.html">My Teams</a>
+        <a href="profile.html">My Profile</a>
+        <button type="button" id="logoutButton">Logout</button>
+    </nav>
+
+    <main class="profile-section">
+
+        <h1>My Student Profile</h1>
+        <p>Tell other students about yourself and your skills.</p>
+
+        <form id="profileForm">
+
+            <label for="profileName">Full Name</label>
+            <input
+                type="text"
+                id="profileName"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <label for="profileCollege">College Name</label>
+            <input
+                type="text"
+                id="profileCollege"
+                placeholder="Enter your college name"
+                required
+            >
+
+            <label for="profileDepartment">Department</label>
+            <select id="profileDepartment" required>
+                <option value="">Select department</option>
+                <option value="CSE">Computer Science (CSE)</option>
+                <option value="IT">Information Technology (IT)</option>
+                <option value="ECE">Electronics (ECE)</option>
+                <option value="EEE">Electrical (EEE)</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Civil">Civil</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="profileYear">Current Year</label>
+            <select id="profileYear" required>
+                <option value="">Select year</option>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+
+            <label for="profileSkills">Skills</label>
+            <input
+                type="text"
+                id="profileSkills"
+                placeholder="Python, Java, HTML, Machine Learning"
+                required
+            >
+
+            <label for="profileInterests">Project Interests</label>
+            <input
+                type="text"
+                id="profileInterests"
+                placeholder="AI, Web Development, IoT"
+                required
+            >
+
+            <label for="profileBio">About Me</label>
+            <textarea
+                id="profileBio"
+                placeholder="Write a short introduction about yourself"
+                rows="4"
+                required
+            ></textarea>
+
+            <button type="submit">Save Profile</button>
+
+        </form>
+
+        <p id="profileMessage" aria-live="polite"></p>
+
+        <section id="savedProfile" hidden>
+            <h2>My Saved Profile</h2>
+            <div id="profileDisplay"></div>
+            <button type="button" id="editProfileButton">
+                Edit Profile
+            </button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

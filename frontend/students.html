@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Teammates - TeamUp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <h2>TeamUp<span class="logo-dot">.</span></h2>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="project.html">Browse Projects</a>
+            <a href="teams.html">My Teams</a>
+            <a href="profile.html">My Profile</a>
+            <a href="students.html">Find Teammates</a>
+            <button type="button" id="logoutButton" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <main class="students-section">
+        <div class="students-heading">
+            <p class="section-label">YOUR NEXT TEAMMATE IS HERE</p>
+            <h1>Find Your <span>People.</span></h1>
+            <p>Discover students with skills and interests like yours.</p>
+        </div>
+
+        <div class="student-filters">
+            <input
+                type="search"
+                id="studentSearch"
+                placeholder="Search by name, college, or skill..."
+                aria-label="Search students"
+            >
+
+            <select id="studentSkill">
+                <option value="">All Skills</option>
+                <option value="Python">Python</option>
+                <option value="Java">Java</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JavaScript">JavaScript</option>
+                <option value="Machine Learning">Machine Learning</option>
+                <option value="AI">AI</option>
+                <option value="IoT">IoT</option>
+                <option value="SQL">SQL</option>
+                <option value="React">React</option>
+            </select>
+
+            <button type="button" id="studentClear">Clear Filters</button>
+        </div>
+
+        <p id="studentCount" aria-live="polite"></p>
+
+        <div id="studentList" class="student-grid"></div>
+    </main>
+
+    <footer class="site-footer">
+        <h2>TeamUp<span class="logo-dot">.</span></h2>
+        <p>Ideas are better when we build them together.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
